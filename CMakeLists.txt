@@ -15,7 +15,7 @@ string(
         ">"
 )
 add_library(${PROJECT_NAME} STATIC
-  ${CMAKE_CURRENT_SOURCE_DIR}/sources/example/example.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/sources/lab/lab.cpp
 )
 
 add_executable(${PROJECT_NAME}_ex
@@ -23,8 +23,8 @@ add_executable(${PROJECT_NAME}_ex
 )
 
 target_include_directories(${PROJECT_NAME} PUBLIC
-  "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/sources/example>"
-  "$<INSTALL_INTERFACE:/sources/example>"
+  "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/sources/lab>"
+  "$<INSTALL_INTERFACE:/sources/lab>"
 )
 
 target_link_libraries(${PROJECT_NAME}_ex ${PROJECT_NAME})
